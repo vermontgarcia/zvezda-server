@@ -5,12 +5,15 @@
     "moduleResolution": "NodeNext",
     "baseUrl": "src",
     "outDir": "./dist",
+    "rootDir": ".",
     "resolveJsonModule": true,
     "sourceMap": true,
     "noImplicitAny": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    // "allowImportingTsExtensions": true,
+    // "noEmit": true
   },
-  "include": ["src/**/*", "src/app.ts"],
+  "include": ["src/**/*", "server.ts"],
   "exclude": ["node_modules"],
   "ts-node": {
     "esm": true,
