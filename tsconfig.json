@@ -10,13 +10,7 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
-    // "allowImportingTsExtensions": true,
-    // "noEmit": true
   },
   "include": ["src/**/*", "server.ts"],
   "exclude": ["node_modules"],
-  "ts-node": {
-    "esm": true,
-    "compiler": "typescript"
-  }
 }

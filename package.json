@@ -5,8 +5,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "ts-node server.ts",
-    "dev": "nodemon",
+    "start": "node dist/server.js",
+    "dev": "npm run build && nodemon --watch dist --exec 'node dist/server.js'",
     "build": "tsc",
     "prod": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +19,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "mongoose": "^8.14.3",
     "morgan": "^1.10.0",
     "ws": "^8.18.2"
   },
