@@ -12,3 +12,4 @@ const GH_CALLBACK_URL = process.env.GH_CALLBACK_URL;
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 const GOOGLE_CALLBACK_URL = process.env.GOOGLE_CALLBACK_URL;
+export const DEEPL_API_KEY = process.env.DEEPL_API_KEY;
