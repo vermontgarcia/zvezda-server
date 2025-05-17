@@ -91,6 +91,10 @@ app.get('/', async (_, res) => {
   res.send('WebSocket signaling server is running.');
 });
 
+app.get('/ping', (req, res) => {
+  res.status(200).send('pong');
+});
+
 /**
  * Landing Page Static Routes
  */
