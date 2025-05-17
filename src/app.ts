@@ -54,12 +54,16 @@ const getTranslation = async (ws: any, message: any) => {
   });
 };
 
-wss.on('connection', (ws) => {
+wss.on('connection', (ws, req) => {
   console.log('WebSocket client connected');
+  const ip = req.socket.remoteAddress;
+  console.log({ ip });
 
   ws.on('message', (message) => {
     console.log('Message received:', message.toString());
     const data = JSON.parse(message.toString());
+    //@ts-ignore
+    ws.clientIp = ip;
 
     if (data.type === 'translationRequest') {
       getTranslation(ws, data);
@@ -69,7 +73,8 @@ wss.on('connection', (ws) => {
         if (client !== ws && client.readyState === ws.OPEN) {
           client.send(message.toString());
         }
-        console.log({ client });
+        //@ts-ignore
+        console.log({ ip: client.clientIp });
       });
       console.log({ data });
     }
