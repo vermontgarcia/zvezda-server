@@ -69,7 +69,9 @@ wss.on('connection', (ws) => {
         if (client !== ws && client.readyState === ws.OPEN) {
           client.send(message.toString());
         }
+        console.log({ client });
       });
+      console.log({ data });
     }
   });
 });
